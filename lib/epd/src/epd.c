@@ -6,12 +6,3 @@
  * @copyright   :   MIT LICENSE
  * @brief       :   the implementation of epd
  ****************************************************************/
-
-#include "epd.h"
-
-void Test()
-{
-    EpdCommand command;
-
-    command = INIT;
-}
