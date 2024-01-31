@@ -12,56 +12,33 @@
 
 #include <stdint.h>
 
-#include "uc8253_common.h"
 #include "driver/gpio.h"
 #include "driver/spi_master.h"
 
+#include "command.h"
+#include "data.h"
+#include "default.h"
+
+/**
+ * @brief pin map for uc8253
+ *
+ */
 typedef struct
 {
-    /**
-     * @brief
-     *
-     */
-    gpio_num_t busy;
-
-    /**
-     * @brief
-     *
-     */
-    gpio_num_t reset;
-
-    /**
-     * @brief
-     *
-     */
-    gpio_num_t dc;
-
-    /**
-     * @brief
-     *
-     */
-    gpio_num_t cs;
+    gpio_num_t busy;  // 0: busy, 1: idle
+    gpio_num_t reset; // 0: reset, 1: normal
+    gpio_num_t dc;    // 0: command, 1: data
+    gpio_num_t cs;    // 0: select, 1: unselect
+    gpio_num_t clk;   // 0: low, 1: high
+    gpio_num_t mosi;  // 0: low, 1: high
+    gpio_num_t miso;  // 0: low, 1: high
 
 } uc8253_pinmap_t;
 
 typedef struct
 {
-    /**
-     * @brief
-     *
-     */
     spi_host_device_t host;
-
-    /**
-     * @brief
-     *
-     */
     spi_device_handle_t device;
-
-    /**
-     * @brief
-     *
-     */
     uc8253_pinmap_t pinmap;
 } uc8253_t;
 
@@ -73,4 +50,5 @@ typedef struct
  * @return uc8253_t*
  */
 uc8253_t *uc8253_init(spi_host_device_t host, uc8253_pinmap_t pinmap);
+
 #endif /* _H_EPD_ */

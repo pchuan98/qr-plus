@@ -8,6 +8,7 @@
     "cmake.configureOnOpen": true,
     "files.associations": {
         "freertos.h": "c",
-        "driver.h": "c"
+        "driver.h": "c",
+        "uc8253.h": "c"
     }
 }

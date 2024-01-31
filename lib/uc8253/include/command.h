@@ -1,44 +1,14 @@
 /****************************************************************
- * @file        :   uc8253_common.h
+ * @file        :   command.h
  * @version     :   1.0.0
- * @date        :   2024-01-29 00:04:34
+ * @date        :   2024-01-31 16:59:35
  * @author      :   chuan
  * @copyright   :   MIT LICENSE
- * @brief       :   the driver file for UC8253c
+ * @brief       :   The Command Enum for UC8253
  ****************************************************************/
 
-#ifndef _H_HEADER_NAME_
-#define _H_HEADER_NAME_
-
-// /**
-//  * @brief source x gate
-//  * @remark w/d
-//  */
-// typedef enum _EpdPanelSize
-// {
-//     /**
-//      * @brief
-//      * Active gate channels: G0 - G249, active source channels: S0 - S119
-//      */
-//     S240x120 = 0x00b, // default
-
-//     S320x160 = 0x01b, // Current using...
-//     S400x200 = 0x10b,
-//     S480x240 = 0x11b,
-// } EpdPanelSize;
-
-// /**
-//  * @brief 执行PSR命令后设置参数
-//  * @cond ssd1675
-//  */
-// typedef struct _PSRConfig
-// {
-//     /**
-//      * @brief display resolution setting (source x gate)
-//      *
-//      */
-//     int RES;
-// } psr_config;
+#ifndef _H_UC8253_COMMAND_
+#define _H_UC8253_COMMAND_
 
 /**
  * @brief
@@ -199,4 +169,4 @@ typedef enum
     UC8253_C_PWS = 0xe3,
 } uc8253_command_t;
 
-#endif /* _H_HEADER_NAME_ */
+#endif /* _H_UC8253_COMMAND_ */
