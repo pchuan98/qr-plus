@@ -7,6 +7,7 @@
  * @brief       :   全局配置层
  ****************************************************************/
 
-#define u32 unsigned int
+#include <stdint.h>
+
 #define On 0
 #define Off 1

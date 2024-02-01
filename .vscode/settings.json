@@ -13,6 +13,14 @@
         "gpio.h": "c",
         "spi_master.h": "c",
         "command.h": "c",
-        "default.h": "c"
+        "default.h": "c",
+        "esp_spi_flash.h": "c",
+        "stdio.h": "c",
+        "sdkconfig.h": "c",
+        "functional": "c",
+        "array": "c",
+        "string": "c",
+        "string_view": "c",
+        "config.h": "c"
     }
 }

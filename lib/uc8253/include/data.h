@@ -25,7 +25,7 @@ typedef struct
      * 10b: 400x200
      * 11b: 480x240
      */
-    u32 res1 : 1;
+    uint8_t res1 : 1;
 
     /**
      * @brief Display Resolution setting (source x gate)
@@ -35,7 +35,7 @@ typedef struct
      * 10b: 400x200
      * 11b: 480x240
      */
-    u32 res2 : 1;
+    uint8_t res2 : 1;
 
     /**
      * @brief LUT selection
@@ -43,7 +43,7 @@ typedef struct
      * 0: LUT from OTP. (Default)
      * 1: LUT from register.
      */
-    u32 reg : 1;
+    uint8_t reg : 1;
 
     /**
      * @brief Black / White / Red
@@ -51,7 +51,7 @@ typedef struct
      * 0: Pixel with Black/White/Red, KWR mode. (Default)
      * 1: Pixel with Black/White, KW mode.
      */
-    u32 kwr : 1;
+    uint8_t kwr : 1;
 
     /**
      * @brief Gate Scan Direction
@@ -59,14 +59,14 @@ typedef struct
      * 0: Scan down.            First line to Last line: Gn1->Gn2->Gn3->...->G0
      * 1: Scan up. (Default)    First line to Last line: G0->G1->G2->...->Gn-1
      */
-    u32 ud : 1;
+    uint8_t ud : 1;
 
     /**
      * @brief Source Shift Direction
      * 0: Shift left.               First data to Last data: Sn1->Sn2->Sn3->...->S0
      * 1: Shift right. (Default)    First data to Last data: S0->S1->S2->...->Sn-1
      */
-    u32 shl : 1;
+    uint8_t shl : 1;
 
     /**
      * @brief Booster Switch
@@ -78,7 +78,7 @@ typedef struct
      * register and SRAM data will keep until VDD OFF.
      * And Source/Gate/Border/VCOM will be released to floating.
      */
-    u32 shd : 1;
+    uint8_t shd : 1;
 
     /**
      * @brief Soft Reset
@@ -92,7 +92,7 @@ typedef struct
      *
      * 1: No effect  (Default).
      */
-    u32 rst : 1;
+    uint8_t rst : 1;
 
 } uc8253_data_psr_t;
 
