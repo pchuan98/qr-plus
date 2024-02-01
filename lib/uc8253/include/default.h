@@ -12,16 +12,8 @@
 
 #include "command.h"
 #include "data.h"
+#include "uc8253.h"
 
-uc8253_data_psr_t psr_data_g = {
-    .res1 = 0,
-    .res2 = 0,
-    .reg = 0,
-    .kwr = 1,
-    .ud = 1,
-    .shl = 0,
-    .shd = 1,
-    .rst = 1,
-};
+extern uc8253_data_psr_t psr_data_g;
 
 #endif /* _H_UC8253_DEFAULT_ */

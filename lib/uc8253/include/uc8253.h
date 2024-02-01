@@ -25,14 +25,13 @@
  */
 typedef struct
 {
-    gpio_num_t busy;  // 0: busy, 1: idle
-    gpio_num_t reset; // 0: reset, 1: normal
-    gpio_num_t dc;    // 0: command, 1: data
-    gpio_num_t cs;    // 0: select, 1: unselect
     gpio_num_t clk;   // 0: low, 1: high
     gpio_num_t mosi;  // 0: low, 1: high
     gpio_num_t miso;  // 0: low, 1: high
-
+    gpio_num_t dc;    // 0: command, 1: data
+    gpio_num_t cs;    // 0: select, 1: unselect
+    gpio_num_t reset; // 0: reset, 1: normal
+    gpio_num_t busy;  // 0: busy, 1: idle
 } uc8253_pinmap_t;
 
 typedef struct
@@ -50,5 +49,7 @@ typedef struct
  * @return uc8253_t*
  */
 uc8253_t *uc8253_init(spi_host_device_t host, uc8253_pinmap_t pinmap);
+
+void test();
 
 #endif /* _H_EPD_ */

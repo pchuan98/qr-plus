@@ -9,6 +9,10 @@
     "files.associations": {
         "freertos.h": "c",
         "driver.h": "c",
-        "uc8253.h": "c"
+        "uc8253.h": "c",
+        "gpio.h": "c",
+        "spi_master.h": "c",
+        "command.h": "c",
+        "default.h": "c"
     }
 }

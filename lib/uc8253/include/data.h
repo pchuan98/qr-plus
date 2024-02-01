@@ -9,9 +9,7 @@
 #ifndef _H_UC8253_DATA_
 #define _H_UC8253_DATA_
 
-#define u32 unsigned int
-#define On 0
-#define Off 1
+#include "config.h"
 
 /**
  * @brief Follow the Command UC8253_C_PSR
