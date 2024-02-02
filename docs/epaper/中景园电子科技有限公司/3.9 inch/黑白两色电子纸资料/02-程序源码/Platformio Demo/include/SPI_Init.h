@@ -7,11 +7,11 @@
 #define u16 unsigned int
 #define u32 unsigned long
 
-#define EPD_SCK 14
-#define EPD_MOSI 15
+#define EPD_SCK 18
+#define EPD_MOSI 17
 #define EPD_RES 16
-#define EPD_DC 17
-#define EPD_CS 18
+#define EPD_DC 15
+#define EPD_CS 14
 #define EPD_BUSY 13
 
 #define EPD_SCK_Clr() digitalWrite(EPD_SCK, LOW)
