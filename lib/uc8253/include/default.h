@@ -15,5 +15,6 @@
 #include "uc8253.h"
 
 extern uc8253_data_psr_t psr_data_g;
+extern uc8253_data_ccset_t ccset_data_g;
 
 #endif /* _H_UC8253_DEFAULT_ */

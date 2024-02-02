@@ -19,3 +19,8 @@ uc8253_data_psr_t psr_data_g = {
     .shd = 1,
     .rst = 1,
 };
+
+uc8253_data_ccset_t ccset_data_g = {
+    .ccen = 0,
+    .tsfix = 1,
+};

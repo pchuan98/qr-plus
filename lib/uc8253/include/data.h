@@ -14,6 +14,7 @@
 /**
  * @brief Follow the Command UC8253_C_PSR
  *
+ * high to low
  */
 typedef struct
 {
@@ -95,5 +96,44 @@ typedef struct
     uint8_t rst : 1;
 
 } uc8253_data_psr_t;
+
+/**
+ * @brief
+ *
+ * 低二位，从低到高
+ */
+typedef struct
+{
+    /**
+     * @brief Output clock enable/disable.
+     *
+     * 0: Output 0V at CL pin. (default)
+     * 1: Output clock at CL pin for slave chip.
+     */
+    uint8_t ccen : 1;
+
+    /**
+     * @brief Let the value of slave’s temperature is same as the master’s.
+     *
+     * 0: Temperature value is defined by internal temperature sensor / external LM75. (default)
+     * 1: Temperature value is defined by TS_SET[7:0] registers.
+     */
+    uint8_t tsfix : 1;
+
+} uc8253_data_ccset_t;
+
+/**
+ * @brief Fast refresh temperature setting
+ *
+ * 范围值，自己测量
+ */
+#define UC8253_D_FAST_TEMPERATURE 0x5F
+
+/**
+ * @brief Part temperature setting
+ *
+ * 范围值，自己测量
+ */
+#define UC8253_D_PART_TEMPERATURE 0x6F
 
 #endif /* _H_UC8253_DATA_ */

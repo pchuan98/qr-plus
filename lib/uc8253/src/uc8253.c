@@ -237,6 +237,34 @@ void uc8253_update(uc8253_t *uc8253)
     send_command(uc8253, UC8253_C_DRF);
 }
 
+void uc8253_fast_refresh(uc8253_t *uc8253)
+{
+    uc8253_set_pannel(uc8253, psr_data_g);
+
+    send_command(uc8253, UC8253_C_CCSET);
+    uint8_t data = 0;
+    data |= ccset_data_g.ccen << 0;
+    data |= ccset_data_g.tsfix << 1;
+    send_data(uc8253, data);
+
+    send_command(uc8253, UC8253_C_TSSET);
+    send_data(uc8253, UC8253_D_FAST_TEMPERATURE);
+}
+
+void uc8253_part_refresh(uc8253_t *uc8253)
+{
+    uc8253_set_pannel(uc8253, psr_data_g);
+
+    send_command(uc8253, UC8253_C_CCSET);
+    uint8_t data = 0;
+    data |= ccset_data_g.ccen << 0;
+    data |= ccset_data_g.tsfix << 1;
+    send_data(uc8253, data);
+
+    send_command(uc8253, UC8253_C_TSSET);
+    send_data(uc8253, UC8253_D_PART_TEMPERATURE);
+}
+
 void test()
 {
     uc8253_pinmap_t pinmap = {

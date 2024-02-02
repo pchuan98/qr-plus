@@ -105,6 +105,20 @@ void uc8253_update(uc8253_t *uc8253);
  */
 void uc8253_clear(uc8253_t *uc8253, uint8_t color);
 
+/**
+ * @brief fast refresh
+ *
+ * @param uc8253
+ */
+void uc8253_fast_refresh(uc8253_t *uc8253);
+
+/**
+ * @brief part refresh
+ *
+ * @param uc8253
+ */
+void uc8253_part_refresh(uc8253_t *uc8253);
+
 void test();
 
-#endif /* _H_EPD_ */
+#endif /* _H_EP D_ */

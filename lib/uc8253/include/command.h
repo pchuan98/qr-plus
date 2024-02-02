@@ -165,8 +165,21 @@ typedef enum
     UC8253_C_PGM = 0xa0,
     UC8253_C_APG = 0xa1,
     UC8253_C_ROTP = 0xa2,
-    UC8253_C_CCSET = 0xe0,
-    UC8253_C_PWS = 0xe3,
+
+    /**
+     * @brief CASCADE SETTING
+     * This command is used for cascade.
+     */
+    UC8253_C_CCSET = 0xE0,
+    UC8253_C_PWS = 0xE3,
+    UC8253_C_LVSEL = 0xE4,
+
+    /**
+     * @brief FORCE TEMPERATURE
+     *
+     * This command is used for cascade to fix the temperature value of master and slave chip.
+     */
+    UC8253_C_TSSET = 0xE5,
 } uc8253_command_t;
 
 #endif /* _H_UC8253_COMMAND_ */
